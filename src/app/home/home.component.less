@@ -2,14 +2,12 @@
 @shopItemImageWidth: 220px;
 
 .shopItems{
-    display:grid;
-    grid-template-columns: @shopItemWidth @shopItemWidth @shopItemWidth @shopItemWidth;
-    grid-gap: 13px;
     margin-top:10px;
     .item{
         background:#2f2f2f;
         text-align:center;
         border:1px solid #2f2f2f;
+        overflow:hidden;
         .headLine,.bottomLine{
             font-size:11px;
             color:#fff;
@@ -27,5 +25,13 @@
         img{
             width:@shopItemImageWidth;
         }
+    }
+}
+.filterForm{
+    width:100%;
+    input,select{
+        max-width:300px;
+        display:inline-block;
+        margin:10px;
     }
 }

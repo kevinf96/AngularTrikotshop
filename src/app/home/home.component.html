@@ -1,13 +1,17 @@
-<input class="input" type="text" [formControl]="searchText" placeholder="Suche..."/>
-<select class="form-control" [formControl]="leagueSelect"> >
-     <option *ngFor="let cat of shopCategory" [value]="cat.id">{{cat.name}}</option>
-</select>
-{{ searchText.value }}
-
-<div class="shopItems">
-     <div class="item" *ngFor="let item of (shopItems | search : searchText.value : leagueSelect.value)">
-          <div class="headLine">{{ item.name }}</div>
-          <div class="content"><img src="assets/img/{{ item.image }}"></div>
-          <div class="bottomLine">{{ item.price }}€</div>
+<div class="row">
+     <div class="filterForm">
+          <input class="form-control" type="text" [formControl]="searchText" placeholder="Suche..."/>
+          <select class="form-control" [formControl]="leagueSelect"> >
+               <option *ngFor="let cat of shopCategory" [value]="cat.id">{{cat.name}}</option>
+          </select>
      </div>
 </div>
+<div class="row shopItems">
+     <div class="col-md-3" *ngFor="let item of (shopItems | search : searchText.value : leagueSelect.value)">
+          <div class="item">
+               <div class="headLine">{{ item.name }}</div>
+               <div class="content"><img src="assets/img/{{ item.image }}"></div>
+               <div class="bottomLine">{{ item.price }}€</div>
+          </div>
+     </div>
+ </div>
