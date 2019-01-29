@@ -1,0 +1,31 @@
+@shopItemWidth: 260px;
+@shopItemImageWidth: 220px;
+
+.shopItems{
+    display:grid;
+    grid-template-columns: @shopItemWidth @shopItemWidth @shopItemWidth @shopItemWidth;
+    grid-gap: 13px;
+    margin-top:10px;
+    .item{
+        background:#2f2f2f;
+        text-align:center;
+        border:1px solid #2f2f2f;
+        .headLine,.bottomLine{
+            font-size:11px;
+            color:#fff;
+            height:30px;
+            line-height:30px;
+            background:#2f2f2f;
+        }
+        .content{
+            background:#fff;
+        }
+        .bottomLine{
+            font-size:15px;
+            font-weight:bold;
+        }
+        img{
+            width:@shopItemImageWidth;
+        }
+    }
+}
