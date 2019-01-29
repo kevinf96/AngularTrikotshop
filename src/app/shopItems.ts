@@ -4,4 +4,8 @@ export class ShopItem {
     name: string;
     image: string;
     price: number;
-  }
+}
+export class ShopCategory{
+  id: number;
+  name: string;
+}

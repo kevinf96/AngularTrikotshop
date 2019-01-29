@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { shopItemList } from '../itemlist';
+import { shopItemList,shopCategoryList } from '../itemlist';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -9,10 +9,13 @@ import { FormControl } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   shopItems = shopItemList;
+  shopCategory = shopCategoryList;
   itemCount: number = 4;
   constructor() { }
   searchText = new FormControl('');
+  leagueSelect = new FormControl('');
   ngOnInit() {
+    this.leagueSelect.setValue(this.shopCategory[0].id);
   }
 
 }
