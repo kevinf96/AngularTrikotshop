@@ -1,5 +1,7 @@
 # Angular Soccer-Jersey Shop 
 
+Live Demo: [Click](https://kevin-fink.ovh/angularshop/)
+
 I wanted to get started with Angular so I started making a design in Photoshop. This website is only for learning the basics of Angular.
 
 You can define items and categorys in itemlist.ts
@@ -34,6 +36,5 @@ You can define items and categorys in itemlist.ts
     ];
 
 
-Live Demo: [Click](https://kevin-fink.ovh/angularshop/)
 
 ![Screenshot of the page](https://puu.sh/CEAIz/dc07649b43.png)
