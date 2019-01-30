@@ -1,6 +1,6 @@
 <div class="row">
      <div class="filterForm">
-          <input class="form-control" type="text" [formControl]="searchText" placeholder="Suche..."/>
+          <input class="form-control" type="text" [formControl]="searchText" placeholder="Suche..." />
           <select class="form-control" [formControl]="leagueSelect"> >
                <option *ngFor="let cat of shopCategory" [value]="cat.id">{{cat.name}}</option>
           </select>
@@ -14,4 +14,4 @@
                <div class="bottomLine">{{ item.price }}€</div>
           </div>
      </div>
- </div>
+</div>
