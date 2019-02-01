@@ -9,5 +9,4 @@ import { FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'TestApp';
-  //searchText = new FormControl('');
 }

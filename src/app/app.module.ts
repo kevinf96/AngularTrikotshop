@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
+import { ShoppingService } from './shopping.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SearchPipe } from './search.pipe';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

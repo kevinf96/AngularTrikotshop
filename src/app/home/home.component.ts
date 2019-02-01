@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { shopItemList,shopCategoryList } from '../itemlist';
 import { FormControl } from '@angular/forms';
+import { ShoppingService } from '../shopping.service';
+import { ShopItem, ShopCategory } from '../shopItems';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,17 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-  shopItems = shopItemList;
-  shopCategory = shopCategoryList;
+  shopItems : ShopItem[];
+  shopCategory : ShopCategory[];
   itemCount: number = 4;
-  constructor() { }
   searchText = new FormControl('');
   leagueSelect = new FormControl('');
+
+  constructor(private _shoppingService : ShoppingService) { }
+
   ngOnInit() {
+    this.shopItems = this._shoppingService.getItems();
+    this.shopCategory = this._shoppingService.getCategorys();
     this.leagueSelect.setValue(this.shopCategory[0].id);
   }
 
