@@ -1,27 +1,40 @@
-# TestApp
+# Angular Soccer-Jersey Shop 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+Live Demo: [Click](https://kevin-fink.ovh/angularshop/)
 
-## Development server
+I wanted to get started with Angular so I started making a design in Photoshop. This website is only for learning the basics of Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can define items and categorys in itemlist.ts
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    export  const  shopItemList:  ShopItem[] = [
+    
+	    { id:  1, category:2, name:  "FC Juventus Turin Trikot Home 2018/2019",image:"juventus.jpg",price:59.99 },
+	    
+	    { id:  2, category:2, name:  "FC Juventus Turin Trikot UCL 2018/2019 Grau",image:"juventus_away.jpg",price:69.99 },
+	    
+	    { id:  3, category:3, name:  "Manchester United Trikot Home 2018/2019",image:"manu.jpg",price:69.99 },
+	    
+	    { id:  4, category:4, name:  "Paris St. Germain Trikot Away 2018/2019",image:"psg.jpg",price:54.99 },
+	    
+	    { id:  5, category:1, name:  "FC Bayern München Trikot Home 2018/2019",image:"fcb.jpg",price:54.99 }
+    
+    ];
+    
+    export  const  shopCategoryList:  ShopCategory[] = [
+    
+	    { id:  0, name:"Alle"},
+	    
+	    { id:  1, name:"Bundesliga"},
+	    
+	    { id:  2, name:"Serie A"},
+	    
+	    { id:  3, name:"Premier League"},
+	    
+	    { id:  4, name:"Ligue 1"}
+    
+    ];
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Screenshot of the page](https://puu.sh/CEAIz/dc07649b43.png)
