@@ -23,4 +23,8 @@ export class HomeComponent implements OnInit {
     this.leagueSelect.setValue(this.shopCategory[0].id);
   }
 
+  onAddShoppingCart(itemID: any){
+    this._shoppingService.addShoppingCart(itemID);
+  }
+
 }

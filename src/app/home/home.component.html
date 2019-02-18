@@ -10,7 +10,10 @@
      <div class="col-md-3" *ngFor="let item of (shopItems | search : searchText.value : leagueSelect.value)">
           <div class="item">
                <div class="headLine">{{ item.name }}</div>
-               <div class="content"><img src="assets/img/{{ item.image }}"></div>
+               <div class="content">
+                    <img src="assets/img/{{ item.image }}">
+                    <button class="btn btn-secondary" (click)="onAddShoppingCart(item.id)">Zum Warenkorb hinzufügen</button>
+               </div>
                <div class="bottomLine">{{ item.price }}€</div>
           </div>
      </div>

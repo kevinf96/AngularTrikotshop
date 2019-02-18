@@ -6,11 +6,20 @@ import { shopItemList,shopCategoryList } from './itemlist';
 export class ShoppingService {
   constructor() { }
 
+  shoppingCart: number[] = [];
   getItems(){
     return shopItemList;
   }
 
   getCategorys(){
     return shopCategoryList;
+  }
+
+  addShoppingCart(itemID : number){
+    this.shoppingCart.push(itemID);
+  }
+
+  getShoppingCart(){
+    return this.shoppingCart;
   }
 }

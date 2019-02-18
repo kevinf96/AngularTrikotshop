@@ -2,8 +2,28 @@
     <div class="container">
         <div class="section1">
             <a class="logo"></a>
-            <div class="searchForm">
+            <div class="searchForm">          
             </div>
+            <div class="shopping-cart">
+                <div class="shopping-cart-header">
+                    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{ shoppingCart.length }}</span>
+                </div>
+                <!--end shopping-cart-header -->
+                <ng-template [ngIf]="shoppingCart.length >= 1">
+                    <div class="shoppingCartContainer">
+                        <ul class="shopping-cart-items" *ngFor="let item of (shoppingCart);let i = index" [attr.data-index]="i">
+                            <li class="clearfix">
+                                <img src="assets/img/{{ shopItems[item-1].image }}" alt="{{ shopItems[item-1].name }}">
+                                <span class="item-name">{{ shopItems[item-1].name }}</span>
+                                <span class="item-price">{{ shopItems[item-1].price }}€</span>
+                            </li>
+                        </ul>
+                
+                        <a href="#" class="button">Checkout</a>
+                    </div>
+                </ng-template>
+            </div>
+            <!--end shopping-cart -->
         </div>
         <nav>
             <ul>
